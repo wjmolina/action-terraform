@@ -8,3 +8,10 @@ terraform {
     key    = "terraform/terraform.tfstate"
   }
 }
+
+resource "aws_ssm_parameter" "example" {
+  name  = "/myapp/database/password"
+  type  = "SecureString"
+  value = "secretpassword"
+}
+

@@ -4,14 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "wmolina"
-    key    = "terraform/terraform.tfstate"
+    bucket = "foo"
+    key    = "bar/baz"
   }
 }
-
-resource "aws_ssm_parameter" "example" {
-  name  = "/myapp/database/password"
-  type  = "SecureString"
-  value = "secretpassword"
-}
-

@@ -1,0 +1,7 @@
+name: destroy
+on: workflow_dispatch
+jobs:
+  !include setup.yaml
+  job:
+    steps:
+      - run: terraform destroy -auto-approve

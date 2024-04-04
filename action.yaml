@@ -24,7 +24,7 @@ runs:
       with:
         aws-access-key-id: ${{ inputs.aws-access-key-id }}
         aws-secret-access-key: ${{ inputs.aws-secret-access-key }}
-        aws-region: ${{ aws-region }}
+        aws-region: ${{ inputs.aws-region }}
     - shell: bash
       run: |
         terraform init
